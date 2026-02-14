@@ -1,0 +1,342 @@
+/* Footer.css */
+
+.footer {
+    background: linear-gradient(135deg, #1a0f0a 0%, #2c1810 100%);
+    color: #f4e4bc;
+    padding: 60px 0 20px;
+    font-family: 'Georgia', serif;
+    border-top: 3px solid #d4af37;
+    position: relative;
+    margin-top: 60px;
+  }
+  
+  /* Decorative top border */
+  .footer::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, 
+      transparent 0%, 
+      #d4af37 20%, 
+      #d4af37 80%, 
+      transparent 100%
+    );
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+  }
+  
+  /* Footer Sections */
+  .footer-section {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .footer-section h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #d4af37;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    position: relative;
+    padding-bottom: 10px;
+  }
+  
+  .footer-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: #d4af37;
+  }
+  
+  .footer-section h4 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: #d4af37;
+    font-weight: 400;
+    letter-spacing: 1px;
+    position: relative;
+    padding-bottom: 10px;
+  }
+  
+  .footer-section h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: #d4af37;
+  }
+  
+  .footer-section p {
+    line-height: 1.6;
+    color: #e8d9c0;
+    font-size: 1rem;
+    margin: 0;
+  }
+  
+  /* Quick Links */
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 12px;
+  }
+  
+  .footer-section ul li a {
+    color: #e8d9c0;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    display: inline-block;
+    position: relative;
+  }
+  
+  .footer-section ul li a:hover {
+    color: #d4af37;
+    transform: translateX(5px);
+  }
+  
+  .footer-section ul li a::before {
+    content: '›';
+    position: absolute;
+    left: -15px;
+    opacity: 0;
+    transition: all 0.3s ease;
+    color: #d4af37;
+  }
+  
+  .footer-section ul li a:hover::before {
+    opacity: 1;
+    left: -10px;
+  }
+  
+  /* Contact Info */
+  .footer-section ul li {
+    color: #e8d9c0;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .footer-section ul li span {
+    font-size: 1.2rem;
+  }
+  
+  /* Social Links */
+  .social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .social-links a {
+    color: #e8d9c0;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    background: rgba(212, 175, 55, 0.1);
+    border-radius: 5px;
+    border: 1px solid transparent;
+  }
+  
+  .social-links a:hover {
+    color: #d4af37;
+    background: rgba(212, 175, 55, 0.2);
+    transform: translateY(-2px);
+    border-color: #d4af37;
+  }
+  
+  /* Footer Bottom */
+  .footer-bottom {
+    max-width: 1200px;
+    margin: 40px auto 0;
+    padding: 20px 20px 0;
+    border-top: 1px solid rgba(212, 175, 55, 0.3);
+    text-align: center;
+  }
+  
+  .footer-bottom p {
+    color: #e8d9c0;
+    font-size: 0.9rem;
+    margin: 0;
+    opacity: 0.8;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 968px) {
+    .footer-container {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+    
+    .footer-section h3 {
+      font-size: 1.6rem;
+    }
+    
+    .footer-section h4 {
+      font-size: 1.2rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .footer {
+      padding: 40px 0 20px;
+    }
+    
+    .footer-container {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+    
+    .footer-section {
+      text-align: center;
+    }
+    
+    .footer-section h3::after,
+    .footer-section h4::after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    .footer-section ul li a:hover {
+      transform: translateX(0) scale(1.05);
+    }
+    
+    .footer-section ul li a::before {
+      display: none;
+    }
+    
+    .footer-section ul li {
+      justify-content: center;
+    }
+    
+    .social-links {
+      align-items: center;
+    }
+    
+    .social-links a {
+      width: 200px;
+      justify-content: center;
+    }
+  }
+  
+  /* Animation for footer appearance */
+  @keyframes footerFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .footer-section {
+    animation: footerFadeIn 0.6s ease-out forwards;
+  }
+  
+  .footer-section:nth-child(1) { animation-delay: 0.1s; }
+  .footer-section:nth-child(2) { animation-delay: 0.2s; }
+  .footer-section:nth-child(3) { animation-delay: 0.3s; }
+  .footer-section:nth-child(4) { animation-delay: 0.4s; }
+  
+  /* Hover effect for the entire footer */
+  .footer:hover .footer-section {
+    opacity: 0.9;
+  }
+  
+  /* Optional: Add a subtle pattern overlay */
+  .footer {
+    background-image: 
+      linear-gradient(135deg, #1a0f0a 0%, #2c1810 100%),
+      repeating-linear-gradient(45deg, 
+        rgba(212, 175, 55, 0.02) 0px, 
+        rgba(212, 175, 55, 0.02) 2px,
+        transparent 2px, 
+        transparent 6px
+      );
+    background-blend-mode: overlay;
+  }
+  
+  /* Style for the copyright year */
+  .footer-bottom p::before,
+  .footer-bottom p::after {
+    content: '❖';
+    color: #d4af37;
+    margin: 0 10px;
+    font-size: 0.8rem;
+    opacity: 0.5;
+  }
+  
+  /* Tooltip for contact info (optional) */
+  .footer-section ul li:hover {
+    color: #d4af37;
+    transition: color 0.3s ease;
+  }
+  
+  /* Add some spacing for better readability */
+  .footer-section ul li:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* Style for the social media icons (using emojis) */
+  .social-links a:hover {
+    letter-spacing: 1px;
+  }
+  
+  /* Print styles */
+  @media print {
+    .footer {
+      display: none;
+    }
+  }
+  
+  /* Dark mode support */
+  @media (prefers-color-scheme: dark) {
+    .footer {
+      background: linear-gradient(135deg, #0a0503 0%, #1a0f0a 100%);
+    }
+  }
+  
+  /* High contrast mode */
+  @media (prefers-contrast: high) {
+    .footer {
+      background: #000;
+      border-top: 3px solid #ff0;
+    }
+    
+    .footer-section h3,
+    .footer-section h4,
+    .social-links a:hover {
+      color: #ff0;
+    }
+    
+    .footer-section h3::after,
+    .footer-section h4::after {
+      background: #ff0;
+    }
+  }
