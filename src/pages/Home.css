@@ -528,7 +528,6 @@ h2:before {
 }
 
 .gallery-preview-item:after {
-  content: '🔍';
   position: absolute;
   top: 50%;
   left: 50%;

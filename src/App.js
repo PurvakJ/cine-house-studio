@@ -1,5 +1,4 @@
-// src/App.jsx
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
 import Navbar from './components/Navbar';
@@ -13,6 +12,7 @@ import Contact from './pages/Contact';
 import AdminLogin from './pages/AdminLogin';
 import AdminDashboard from './pages/AdminDashboard';
 import ProtectedRoute from './components/ProtectedRoute';
+import Loader from './components/Loader';
 import './styles/main.css';
 
 // ScrollToTop component that handles scrolling to top on route changes
@@ -30,11 +30,28 @@ function ScrollToTop() {
 }
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  const handleLoaderComplete = () => {
+    setLoading(false);
+  };
+
+  // Optional: Preload any critical assets here
+  useEffect(() => {
+    // Preload images or other assets if needed
+    const preloadAssets = async () => {
+      // Add any preloading logic here
+    };
+    
+    preloadAssets();
+  }, []);
+
   return (
     <AuthProvider>
       <Router>
+        {loading && <Loader onComplete={handleLoaderComplete} />}
         <ScrollToTop />
-        <div className="app">
+        <div className="app" style={{ display: loading ? 'none' : 'block' }}>
           <Navbar />
           <main className="main-content">
             <Routes>
