@@ -55,8 +55,8 @@ const Loader = ({ onComplete }) => {
             <div className="loader__hotshoe"></div>
           </div>
           <div className="loader__brand">
-            <span>THE</span>
-            <span>PHOTO STUDIO</span>
+            <span>CINE</span>
+            <span>HOUSE STUDIO</span>
           </div>
         </div>
 
