@@ -1,7 +1,7 @@
 /* src/pages/AdminDashboard.css */
 
 .admin-dashboard {
-  margin-top: 70px;
+  margin-top: 100px;
   min-height: 100vh;
   background: var(--bg-light);
   font-family: 'Georgia', 'Times New Roman', serif;
@@ -45,9 +45,6 @@
   justify-content: space-between;
   align-items: center;
   border-bottom: var(--border-gold);
-  position: sticky;
-  top: 70px;
-  z-index: 100;
   box-shadow: var(--shadow-md);
 }
 

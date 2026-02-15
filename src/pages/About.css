@@ -1008,5 +1008,12 @@
 .contact-info strong,
 .contact-info a,
 .contact-info p {
-  color: white;
+  color: black;
+}
+
+.contact-card a {
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  display: inline-block;
+  max-width: 100%;
 }
